@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>rigol_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Arbitrary\**" />
+    <Compile Remove="WaveformFunctionTab\**" />
+    <EmbeddedResource Remove="Arbitrary\**" />
+    <EmbeddedResource Remove="WaveformFunctionTab\**" />
+    <None Remove="Arbitrary\**" />
+    <None Remove="WaveformFunctionTab\**" />
+    <Page Remove="Arbitrary\**" />
+    <Page Remove="WaveformFunctionTab\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
